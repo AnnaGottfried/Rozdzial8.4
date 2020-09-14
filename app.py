@@ -13,14 +13,19 @@ def kontakt():
     if request.method == "POST":
         print("form data:")
         print('message:{}'.format(request.form.get('message')))
-        return redirect("/podziekowania")
+        wiadomosc=request.form.get('message')
+      #  return redirect("/podziekowania",message=wiadomosc)
+        return render_template("podziekowania.html", message=wiadomosc)
 
     elif request.method == "GET":
         return render_template("kontakt.html")
 
-@app.route('/podziekowania')
+@app.route('/podziekowania',methods=['GET','POST'])
 def dziekuje():
-    return render_template("podziekowania.html")
+    wiadomosc = request.form.get('message')
+    imie= request.form.get('imie')
+    nazwisko= request.form.get('nazwisko')
+    return render_template("podziekowania.html", message=wiadomosc, imie=imie,nazwisko=nazwisko)
 '''
 
        print("We received P'OST")

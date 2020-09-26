@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return render_template("index.html")
+    return render_template("index.html", Nazwa="Kontakt", strona="/kontakt")
 
 @app.route('/kontakt',methods=['GET','POST'])
 def kontakt():
@@ -18,14 +18,14 @@ def kontakt():
         return render_template("podziekowania.html", message=wiadomosc)
 
     elif request.method == "GET":
-        return render_template("kontakt.html")
+        return render_template("kontakt.html", Nazwa="Strona główna", strona="/")
 
 @app.route('/podziekowania',methods=['GET','POST'])
 def dziekuje():
     wiadomosc = request.form.get('message')
     imie= request.form.get('imie')
     nazwisko= request.form.get('nazwisko')
-    return render_template("podziekowania.html", message=wiadomosc, imie=imie,nazwisko=nazwisko)
+    return render_template("podziekowania.html", message=wiadomosc, imie=imie,nazwisko=nazwisko, Nazwa="Strona główna", strona="/")
 '''
 
        print("We received P'OST")

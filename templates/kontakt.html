@@ -1,35 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title> Strona oficjalna Meg Ryan  </title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" href="{{url_for('static',filename='images/favicon.png')}}">
-<link rel="stylesheet" href="{{url_for('static',filename='styles/style.css')}}">
-</head>
 
-<body>
-    <table style="width:100%">
-        <tr>
-            <td><img src="{{url_for('static',filename='images/meg1.jpg')}}" alt="Meg Ryan"></td>
-    <td><img src="{{url_for('static',filename='images/meg2.jpg')}}" alt="Meg Ryan"></td>
-    <td><img src="{{url_for('static',filename='images/meg3.jpg')}}" alt="Meg Ryan"></td>
-   <!-- <td><img src="images/meg4.jpg" alt="Meg Ryan"></td>-->
-    <td><img src="{{url_for('static',filename='images/meg5.jpg')}}" alt="Meg Ryan"></td>
-    <td><img src="{{url_for('static',filename='images/meg6.jpg')}}" alt="Meg Ryan"></td>
-    <td><img src="{{url_for('static',filename='images/meg7.jpg')}}" alt="Meg Ryan"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-           <!-- <td><img src="images/meg4.jpg" alt="Meg Ryan"></td>-->
-            <td></td>
-            <td></td>
-            <td> <a href= "/">Strona główna </a> </td>
-        </tr>
-        </table>
+
+{% extends "base.html" %}
+{% block content %}
+
+
+
     <h1> Meg Ryan </h1>
     <h2> Kontakt ze mną</h2>
     <ul class="a">
@@ -45,5 +20,4 @@
         <input type="submit">
     </form>
 
-       
-</body>
+{% endblock %}

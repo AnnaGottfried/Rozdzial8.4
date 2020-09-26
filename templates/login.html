@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Strona oficjalna Meg Ryan  </title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="{{url_for('static',filename='images/favicon.png.jpg')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='styles/style.css')}}">
+</head>
+
+<body>
+
+<form action='' method=”POST”>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name='imie' ><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name='nazwisko' ><br><br>
+  <input type="submit" formmethod="post" value="Submit">
+</form>
+</body>
